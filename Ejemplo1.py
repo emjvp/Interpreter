@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+<<<<<<< HEAD
 import copy
 
+=======
+
+import copy
+>>>>>>> e9ce903dd187656585ea09f389e9937bcf62bfdc
 
 class Interpreter1():
     def __init__(self):
@@ -22,6 +27,8 @@ class Interpreter1():
         string = input("Ingrese una cadena:")        
         string_c = copy.copy(string)
 
+        #string = input("Ingrese una cadena:")                        
+
         n = string_c.count('a')
         m = string_c.count('b')        
         f = string_c.count('c')    
@@ -31,6 +38,7 @@ class Interpreter1():
         s_c = string_c.replace('c', ' ')    
         
         if n > 0 and m > 0 and s_a[0] == ' ' and s_b[1] == ' ' and s_c[2] == ' ' and f == 2*n+m:
+
             return 'is part of the language'
         else:
             return 'is not part of the language'
@@ -38,11 +46,13 @@ class Interpreter1():
     def generate_string(self):
         n = input("Ingrese valor de n:")  
         m = input("Ingrese valor de m:")  
-        
+        ni = int
+        mi = int
         try:
-            n = int(n)
-            m = int(m)
-        except ValueError:            
+            ni = int(n)
+            mi = int(m)
+        except ValueError:    
+
             return "Las entradas son incorrectas: escribe numeros enteros"
 
         if n >= 20000000000 and m >= 3000000000:
@@ -62,6 +72,8 @@ class Interpreter1():
 Interpreter = Interpreter1()
 print(Interpreter.is_part_of_L())
 
+Interpreter = Interpreter1()
 
+print(Interpreter.is_part_of_L())
 
             
