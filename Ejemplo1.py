@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import copy
 
 
 class Interpreter1():
@@ -15,12 +15,23 @@ class Interpreter1():
         pass
 
     def is_part_of_L(self): 
+        string = str
+        n = int
+        m = int
+        f = int
         string = input("Ingrese una cadena:")        
+        string_c = copy.copy(string)
+        #string = input("Ingrese una cadena:")                        
+
+        n = string_c.count('a')
+        m = string_c.count('b')        
+        f = string_c.count('c')    
+
+        s_a = string_c.replace('a', ' ')    
+        s_b = string_c.replace('b', ' ')    
+        s_c = string_c.replace('c', ' ')    
         
-        n = string.count('a')
-        m = string.count('b')        
-        c = string.count('c')        
-        if c == 2*n+m and n > 0 and n > 0:
+        if n > 0 and m > 0 and s_a[0] == ' ' and s_b[1] == ' ' and s_c[2] == ' ' and f == 2*n+m:
             return 'is part of the language'
         else:
             return 'is not part of the language'
@@ -49,9 +60,11 @@ class Interpreter1():
         return s
         
 
+Interpreter = Interpreter1()
+print(Interpreter.is_part_of_L())
 
+Interpreter = Interpreter1()
 
-
-
+print(Interpreter.is_part_of_L())
 
             
